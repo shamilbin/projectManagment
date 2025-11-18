@@ -26,6 +26,7 @@ function MyTasksSidebar() {
         }
     };
 
+    
     const fetchUserTasks = () => {
         const userId = user?.id || '';
         if (!userId || !currentWorkspace) return;
