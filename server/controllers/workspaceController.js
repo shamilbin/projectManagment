@@ -82,6 +82,19 @@ export const addMember = async (req, res) => {
     if (existingMember) {
       return res.status(400).json({ message: "User is already a member" });
     }
+
+
+    const memeber = await prisma.workspaceMember.create({
+      data:{
+        userId:user.id,
+        workspaceId,
+        role,
+        message
+      }
+    })
+
+    res.json({ memeber,message: "Member added succesfully" });
+
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.code || error.message });
