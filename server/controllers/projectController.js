@@ -107,6 +107,7 @@ export const updateProject = async (req, res) => {
         where:{id:workspaceId},
         include:{members:{include:{user:true}}}
     })
+
     
 
     if(!workspace){
