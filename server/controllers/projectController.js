@@ -108,7 +108,8 @@ export const updateProject = async (req, res) => {
         include:{members:{include:{user:true}}}
     })
 
-    
+    // console.log("hello")
+
 
     if(!workspace){
          return res.status(404).json({message:"workspace not found"})
