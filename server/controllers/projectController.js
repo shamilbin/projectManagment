@@ -112,6 +112,7 @@ export const updateProject = async (req, res) => {
 
 
     if(!workspace){
+        
          return res.status(404).json({message:"workspace not found"})
     }
 
